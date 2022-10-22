@@ -20,7 +20,7 @@ const ChatRoom = () => {
   };
 
   const connect = () => {
-    let Sock = new SockJS("http://localhost:8080/ws");
+    let Sock = new SockJS("https://hola-chat-app.herokuapp.com/ws");
     stompClient = over(Sock);
     stompClient.connect({}, onConnected, onError);
   };
